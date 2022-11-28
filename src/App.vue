@@ -2,12 +2,12 @@
 
 <template>
   <div class="app">
-    <header class="container header">Header</header>
+    <TheHeader class="container" />
     <main class="container game-board">
       <div>Game Board</div>
     </main>
 
-    <button class="app__button button">Rules</button>
+    <button class="app__button">Rules</button>
   </div>
 </template>
 
