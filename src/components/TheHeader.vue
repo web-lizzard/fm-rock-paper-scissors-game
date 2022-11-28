@@ -1,4 +1,4 @@
-<script lang="ts" sertup></script>
+<script lang="ts" setup></script>
 
 <template>
   <header class="header">header</header>

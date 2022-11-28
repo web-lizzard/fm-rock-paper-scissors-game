@@ -10,6 +10,9 @@ module.exports = {
     '@vue/eslint-config-prettier',
     'plugin:vuejs-accessibility/recommended',
   ],
+  rules: {
+    'no-undef': 'off',
+  },
   parserOptions: {
     ecmaVersion: 'latest',
   },

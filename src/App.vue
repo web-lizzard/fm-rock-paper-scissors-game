@@ -7,7 +7,7 @@
       <div>Game Board</div>
     </main>
 
-    <button class="app__button">Rules</button>
+    <CustomButton light class="app__button" />
   </div>
 </template>
 
