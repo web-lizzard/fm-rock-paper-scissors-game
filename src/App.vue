@@ -3,9 +3,7 @@
 <template>
   <div class="app">
     <TheHeader class="container" />
-    <main class="container game-board">
-      <div>Game Board</div>
-    </main>
+    <main class="container game-board"></main>
 
     <CustomButton class="app__button" />
   </div>
@@ -13,12 +11,12 @@
 
 <style lang="scss" scoped>
 .app {
-  position: relative;
   padding: 3rem 2rem 2rem;
   min-height: 100vh;
   display: grid;
   gap: 4rem;
-  grid-auto-rows: max-content;
+  grid-template-rows: min-content 1fr min-content;
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 
   @include tablet {
     gap: 2rem;
@@ -26,25 +24,27 @@
 }
 
 .app__button {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
+  place-self: center;
 
   @include tablet {
-    left: auto;
-    right: 2rem;
-    transform: translate(0);
+    place-self: end;
   }
 }
 
 .container {
-  max-width: 800px;
   margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
 }
 
 .game-board {
-  max-width: 800px;
-  margin: 0 auto;
+  background-image: url(@/assets/images/bg-pentagon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+
+  @include desktop {
+    background-size: auto;
+  }
 }
 </style>
