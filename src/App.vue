@@ -1,18 +1,9 @@
-<script setup lang="ts">
-import { GameChoices } from './types';
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="app">
     <TheHeader class="container" />
-    <main class="container game-board">
-      <ChooseButton :choice="GameChoices.lizard" />
-      <ChooseButton :choice="GameChoices.scissors" />
-      <ChooseButton :choice="GameChoices.spock" />
-      <ChooseButton :choice="GameChoices.paper" />
-      <ChooseButton :choice="GameChoices.rock" />
-    </main>
-
+    <GameBoard />
     <CustomButton class="app__button" />
   </div>
 </template>
@@ -26,7 +17,7 @@ import { GameChoices } from './types';
   grid-template-rows: min-content 1fr min-content;
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 
-  @include tablet {
+  @include desktop {
     gap: 2rem;
   }
 }
@@ -34,26 +25,8 @@ import { GameChoices } from './types';
 .app__button {
   place-self: center;
 
-  @include tablet {
+  @include desktop {
     place-self: end;
-  }
-}
-
-.container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 800px;
-}
-
-.game-board {
-  background-image: url(@/assets/images/bg-pentagon.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 80%;
-  display: flex;
-
-  @include tablet {
-    background-size: contain;
   }
 }
 </style>

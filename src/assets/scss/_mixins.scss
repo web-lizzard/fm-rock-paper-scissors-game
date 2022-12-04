@@ -1,13 +1,28 @@
 @use 'variables';
 
-@mixin tablet {
+
+@mixin mobile {
     @media (min-width: map-get($map: variables.$breakpoint, $key: sm)) {
+        
+    }
+}
+
+@mixin tablet {
+    @media (min-width: map-get($map: variables.$breakpoint, $key: md)) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media (min-width: map-get($map: variables.$breakpoint, $key: l)) {
+    @media (min-width: map-get($map: variables.$breakpoint, $key: lg)) {
         @content;
     }
 }
+
+
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+  }

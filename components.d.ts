@@ -9,6 +9,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ChooseButton: typeof import('./src/components/ChooseButton.vue')['default']
     CustomButton: typeof import('./src/components/CustomButton.vue')['default']
+    GameBoard: typeof import('./src/components/GameBoard.vue')['default']
     TheHeader: typeof import('./src/components/TheHeader.vue')['default']
   }
 }

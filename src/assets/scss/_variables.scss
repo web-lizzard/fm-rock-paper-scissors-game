@@ -1,8 +1,9 @@
 @use 'sass:math';
 
 $breakpoint: (
-    sm: 375px,
-    lg: 1366px
+    sm: 380px,
+    md: 860px,
+    lg: 1024px
 );
 
 $dark-text:  hsl(229, 25%, 31%);
