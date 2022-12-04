@@ -56,12 +56,10 @@ const choiseModifier = computed(() => {
 
   &::before {
     content: '';
-    box-shadow: 0px -10px 12px -9px rgba(77, 77, 106, 0.8);
     height: 75%;
     aspect-ratio: 1;
     position: absolute;
     border-radius: 50%;
-    background-color: white;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 50%;
@@ -70,7 +68,8 @@ const choiseModifier = computed(() => {
   &--rock {
     background-color: rgba(225, 63, 93, 255);
     &::before {
-      background-image: url(@/assets/images/icon-rock.svg);
+      background: url(@/assets/images/icon-rock.svg),
+        linear-gradient(to top, black, white);
     }
   }
 
