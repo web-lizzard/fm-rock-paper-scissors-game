@@ -1,9 +1,17 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { GameChoices } from './types';
+</script>
 
 <template>
   <div class="app">
     <TheHeader class="container" />
-    <main class="container game-board"></main>
+    <main class="container game-board">
+      <ChooseButton :choice="GameChoices.lizard" />
+      <ChooseButton :choice="GameChoices.scissors" />
+      <ChooseButton :choice="GameChoices.spock" />
+      <ChooseButton :choice="GameChoices.paper" />
+      <ChooseButton :choice="GameChoices.rock" />
+    </main>
 
     <CustomButton class="app__button" />
   </div>
@@ -33,18 +41,19 @@
 
 .container {
   margin: 0 auto;
-  max-width: 800px;
   width: 100%;
+  max-width: 800px;
 }
 
 .game-board {
   background-image: url(@/assets/images/bg-pentagon.svg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 80%;
+  display: flex;
 
-  @include desktop {
-    background-size: auto;
+  @include tablet {
+    background-size: contain;
   }
 }
 </style>
