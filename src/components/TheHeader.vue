@@ -28,6 +28,7 @@ const winStreak = computed(() => store.winStreak);
   &__img {
     display: block;
     max-width: 40%;
+    padding: 1rem 0;
 
     @include tablet {
       max-width: 100%;

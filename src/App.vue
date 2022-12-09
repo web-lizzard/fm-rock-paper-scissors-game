@@ -1,10 +1,22 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useElementOpen } from './composables/use-element-open';
+
+const { handleElementClose, handleElementOpen, isElementOpen } =
+  useElementOpen();
+</script>
 
 <template>
   <div class="app">
     <TheHeader class="container" />
     <GameBoard />
-    <CustomButton class="app__button" />
+    <CustomButton class="app__button" @click="handleElementOpen" />
+    <CustomModal
+      :isOpen="isElementOpen"
+      @close="handleElementClose"
+      @open="handleElementOpen"
+    >
+      modal
+    </CustomModal>
   </div>
 </template>
 

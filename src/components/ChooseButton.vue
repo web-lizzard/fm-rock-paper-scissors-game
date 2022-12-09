@@ -41,7 +41,7 @@ const choiseModifier = computed(() => {
 <style lang="scss" scoped>
 .choice-button {
   border-radius: 50%;
-  height: 80px;
+  height: 90px;
   aspect-ratio: 1;
   position: relative;
   display: grid;
@@ -51,12 +51,12 @@ const choiseModifier = computed(() => {
 
   cursor: pointer;
 
-  @include tablet {
-    height: 140px;
+  @include mobile {
+    height: 110px;
   }
 
-  @include desktop {
-    height: 180px;
+  @include tablet {
+    height: 140px;
   }
 
   &::before {

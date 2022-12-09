@@ -3,7 +3,7 @@
 
 @mixin mobile {
     @media (min-width: map-get($map: variables.$breakpoint, $key: sm)) {
-        
+        @content;
     }
 }
 
