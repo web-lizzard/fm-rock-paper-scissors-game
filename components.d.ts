@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ChooseButton: typeof import('./src/components/ChooseButton.vue')['default']
+    ContestBoard: typeof import('./src/components/ContestBoard.vue')['default']
     CustomButton: typeof import('./src/components/CustomButton.vue')['default']
     CustomModal: typeof import('./src/components/CustomModal.vue')['default']
     FirsStep: typeof import('./src/components/steps/FirsStep.vue')['default']

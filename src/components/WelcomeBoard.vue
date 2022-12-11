@@ -3,7 +3,7 @@ import { useGameState } from '@/stores/game';
 import type { GameChoices } from '@/types';
 import { storeToRefs } from 'pinia';
 
-const { choices, userChoice } = storeToRefs(useGameState());
+const { choices, userChoice, gameState } = storeToRefs(useGameState());
 
 const setButtonClass = (index: number) => {
   return `welcome-board__choice-${index + 1}`;
@@ -11,6 +11,7 @@ const setButtonClass = (index: number) => {
 
 const handleChooseOption = (option: GameChoices) => {
   userChoice.value = option;
+  gameState.value = 'user-choose';
 };
 </script>
 
